@@ -14,7 +14,7 @@ global $textDomain;
 
 ?>
 
-<footer id="footer" class="footer container">
+<footer id="footer" class="footer containe test">
     <div class="footer-wrapper">
         <div class="footer-top">
             <div class="footer-top-column column-identic">
