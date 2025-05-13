@@ -1,0 +1,59 @@
+# General
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.lock
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Composer
+/vendor/
+composer.lock
+
+# PHPStorm / IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# MacOS
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+Icon?
+__MACOSX/
+
+# WordPress
+wp-config.php
+wp-config-sample.php
+wp-admin/
+wp-includes/
+/wp-content/*
+/wp-content/themes/*
+!/wp-content/themes/
+!/wp-content/themes/dompopugaev/
+!/wp-content/themes/dompopugaev/**
+
+# Logs and backups
+*.sql
+*.sql.gz
+*.tar.gz
+*.zip
+*.7z
+*.rar
+*.bak
+*.backup
