@@ -1,0 +1,50 @@
+.woocommerce-account {
+  background: rgba(231, 235, 233, 1);
+}
+
+.woocommerce-account .main {
+  padding: 100px 0;
+}
+.woocommerce-account .container {
+  max-width: 600px;
+}
+.woocommerce-account .woocommerce-form-login-wrapper {
+  background-color: #fff;
+  border: 1px solid var(--gray-border);
+  box-shadow: 0px 0px 4px 0px rgba(18, 51, 34, 0.2);
+  border-radius: 24px;
+  padding: 60px 80px;
+}
+.woocommerce-account .woocommerce-form__title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.woocommerce-account form.login, 
+.woocommerce-account form.register {
+  border: none;
+  padding: 0px;
+  margin: 0;
+  border-radius: 0px;
+}
+
+.woocommerce-account form .woocommerce-button {
+  display: block;
+  margin: 40px auto 0;
+}
+.woocommerce-account .woocommerce-LostPassword {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.48em;
+  text-align: center;
+}
+.woocommerce-account .woocommerce-LostPassword a {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .woocommerce-account .woocommerce-form-login-wrapper {
+    padding: 40px 24px;
+  }
+}
+

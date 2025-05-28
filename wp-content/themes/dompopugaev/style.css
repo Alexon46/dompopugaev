@@ -25,13 +25,14 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
     --blue-dark-60: #2E3A5999;
     --sky: #C2E6F6;
     --sky-progressbar: #E6F3FA;
-    --gray: #B9BCC5;
+    --gray: #8e8e93;
     --gray-light: #CDD0D7;
-    --gray-border: #2E3A593D;
-    --red: #DD0F0F;
+    --gray-border: #adbcb4;
+    --red: #B1050B;
+    --red-hover: #88070c;
     --red-20: #DD0F0F33;
-    --black: #171E2A;
-    --transition: all .3s ease;
+    --black: #000000;
+    --transition: all .22s ease;
 }
 
 html {
@@ -41,9 +42,9 @@ html {
 
 body {
     font-family: "Montserrat", sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
-    line-height: 1em;
+    line-height: 1.5em;
     letter-spacing: 0px;
     color: var(--black);
     overflow-x: hidden;
@@ -74,9 +75,17 @@ body.overlay::before {
 }
 
 .container {
-    max-width: 1356px;
-    margin: 0 auto;
-    padding: 0 30px;
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+@media (max-width: 767px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    } 
 }
 
 .full-width {
@@ -119,6 +128,10 @@ a {
 }
 
 /*---------- TYPOGRAPHY ----------*/
+
+.text-size-32 {
+    font-size: 32px;
+}
 
 h1,
 .h1,
@@ -200,6 +213,10 @@ strong {
 @media (max-width: 1023px) {}
 
 @media (max-width: 767px) {
+    .text-size-32 {
+        font-size: 22px;
+    }
+    
     h1,
     .h1,
     .h1 h1,
@@ -281,15 +298,16 @@ strong {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 306px;
-    min-height: 64px;
-    padding: 6px 10px;
-    font-size: 16px;
-    font-weight: 500;
+    min-width: 175px;
+    min-height: 52px;
+    padding: 6px 36px;
+    font-size: 14px;
+    font-weight: 600;
     text-decoration: none;
     color: var(--white);
-    background-color: var(--green);
-    border-radius: 0px !important;
+    background-color: var(--red);
+    border-radius: 40px !important;
+    border: none !important;
     transition: var(--transition);
 }
 
@@ -301,7 +319,7 @@ strong {
 
 .btn:hover,
 .button.elementor-widget-button .elementor-button:hover {
-    background-color: var(--green-hover);
+    background-color: var(--red-hover);
 }
 
 .btn:disabled,
@@ -314,7 +332,7 @@ strong {
 .button.disabled.elementor-widget-button .elementor-button,
 .button.button-with-icon.elementor-widget-button .elementor-button:disabled,
 .button.button-with-icon.disabled.elementor-widget-button .elementor-button {
-    color: var(--blue-dark-60);
+    color: var(--black);
     background-color: var(--gray);
     cursor: default;
     pointer-events: none;
@@ -535,7 +553,7 @@ strong {
 .form-fields {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 16px;
 }
 
 .form-field {
@@ -570,30 +588,34 @@ strong {
 }
 
 .form-field input,
-.form-field textarea {
+.form-field textarea,
+.form-field select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     outline: none;
     width: 100%;
-    min-height: 64px;
-    padding: 0 24px;
-    font-size: 14px;
+    min-height: 52px;
+    padding: 10px 24px;
+    font-size: 16px;
+    line-height: 1.48em;
     font-weight: 500;
     letter-spacing: 0px;
-    color: var(--blue-dark);
-    border: none;
-    border-radius: 4px;
-    background: var(--white-secondary);
+    color: var(--black);
+    border-radius: 12px;
+    border: 1px solid var(--gray-border);
+    background: #ffffff;
     transition: var(--transition);
     cursor: pointer;
 }
 
 .form-field input::-webkit-input-placeholder {
+    color: var(--gray);
     transition: var(--transition);
 }
 
 .form-field input:-moz-placeholder {
+    color: var(--gray);
     transition: var(--transition);
 }
 
@@ -604,8 +626,8 @@ strong {
 
 .form-field input:-webkit-autofill {
     -webkit-box-shadow: inset 0 0 0 50px var(--white) !important;
-    -webkit-text-fill-color: var(--blue-dark) !important;
-    color: var(--blue-dark) !important;
+    -webkit-text-fill-color: var(--black) !important;
+    color: var(--black) !important;
 }
 
 .form-field input.wpcf7-not-valid,
@@ -736,30 +758,36 @@ strong {
 .form-field.filled label,
 .form-field.filled input,
 .form-field.filled textarea {
-    color: var(--blue-dark);
+    color: var(--black);
 }
 
-.form-field>input:hover,
-.form-field>input:focus,
-.form-field>textarea:hover,
-.form-field>textarea:focus,
+.form-field input:hover,
+.form-field input:focus,
+.form-field textarea:hover,
+.form-field textarea:focus,
 .form-field--select label:hover,
 .form-field.filled label + input,
 .form-field.filled label + textarea {
-    border-color: var(--white);
+    border-color: var(--black);
 }
 
 .form-field input:hover::-webkit-input-placeholder {
-    color: var(--blue-dark);
+    color: var(--gray);
 }
 
 .form-field input:hover:-moz-placeholder {
-    color: var(--blue-dark);
+    color: var(--gray);
 }
 
 .form-field.filled>label {
     left: 40%;
     opacity: 0;
+}
+
+.woocommerce form {
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 
 @media (max-width: 1023px) {
@@ -777,19 +805,15 @@ strong {
         gap: 16px;
     }
 
-    .form-field>label {
-        left: 16px;
-    }
-
     .form-field input,
-    .form-field textarea {
-        min-height: 58px;
-        padding: 0px 16px;
-        font-size: 14px;
+    .form-field textarea,
+    .form-field select {
+        font-size: 12px;
+        border-radius: 12px;
     }
 
     .form-button input[type="submit"] {
-        min-height: 58px;
+        min-height: 42px;
     }
 }
 
@@ -1284,7 +1308,7 @@ strong {
 /*---------- HEADER ----------*/
 
 header {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100%;
@@ -1302,12 +1326,12 @@ body.admin-bar header {
     top: 32px;
 }
 
-header+main,
+/* header+main,
 header+div[data-elementor-type="single-post"],
 header+div[data-elementor-type="archive"] {
     margin-top: 156px;
     padding-top: 15px;
-}
+} */
 
 header .header-wrapper {
     position: relative;

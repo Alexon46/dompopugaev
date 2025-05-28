@@ -120,6 +120,8 @@ function dompopugaev_scripts()
         wp_deregister_style('dashicons');
     }
 
+    wp_dequeue_style('woocommerce-general');
+
     wp_enqueue_style('swiper', get_stylesheet_directory_uri() . '/libs/swiper/swiper-bundle.min.css', array());
     wp_enqueue_script('swiper', get_stylesheet_directory_uri() . '/libs/swiper/swiper-bundle.min.js', array('jquery'), false, true);
 
@@ -130,6 +132,8 @@ function dompopugaev_scripts()
     wp_enqueue_script('domurl-script', get_template_directory_uri() . '/libs/domurl/domurl.js', array('jquery'), false, true);
 
     wp_enqueue_style('fonts', get_stylesheet_directory_uri() . '/fonts/fonts.css', array(), _S_VERSION);
+    wp_enqueue_style('woo-base', get_stylesheet_directory_uri() . '/css/woo/base.css', array(), _S_VERSION);
+    wp_enqueue_style('woo-account', get_stylesheet_directory_uri() . '/css/woo/my-account.css', array(), _S_VERSION);
     wp_enqueue_style('main', get_stylesheet_uri(), array(), _S_VERSION);
 
     wp_enqueue_script('custom', get_stylesheet_directory_uri() . '/js/custom.js', array('jquery'), false, true);
@@ -285,6 +289,9 @@ function add_svg_mime_types($mimes)
 
 /* Includes Custom Post Types */
 require_once 'inc/custom-post-types.php';
+
+/* Includes Woocommerce */
+require_once 'inc/woocommerce.php';
 
 /* Update post excerpt length */
 add_filter('excerpt_length', 'update_excerpt_length', 10, 1);
